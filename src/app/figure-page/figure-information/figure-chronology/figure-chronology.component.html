@@ -1,0 +1,15 @@
+<h2><b>Хронология</b></h2>
+<br>
+<div *ngIf="chronologies; else noData">
+<ul *ngFor="let i of chronologies">
+  <p>Тип события: {{i.kindChronology}}</p>
+  <p>Дата: {{i.date}}</p>
+  <p>Событие: {{i.event}}</p>
+<hr>
+</ul>
+</div>
+<ng-template #noData>
+  <div style="text-align: center">
+    <h1>Нет данных</h1>
+  </div>
+</ng-template>

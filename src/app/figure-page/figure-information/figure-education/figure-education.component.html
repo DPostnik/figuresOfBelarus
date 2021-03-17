@@ -1,0 +1,15 @@
+<div *ngIf="true; else noData">
+<p>Деятельность: {{this.education.activity}}</p>
+<p>Страна получения образования: {{this.education.country}}</p>
+<p>Дата начала: {{this.education.dateBegin | date}}</p>
+<p>Дата окончания: {{this.education.dateEnd | date}}</p>
+<p>Характер образования: {{this.education.kindEducation}}</p>
+<p>Научная школа: {{this.education.scienceSchool}}</p>
+<p>Университет: {{this.education.university}}</p>
+<p>Работа по специальности: {{this.education.workInSpecialty}}</p>
+</div>
+<ng-template #noData>
+  <div style="text-align: center">
+    <h1>Нет данных</h1>
+  </div>
+</ng-template>

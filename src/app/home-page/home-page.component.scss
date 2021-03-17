@@ -1,0 +1,13 @@
+.card_container{
+  width:100%;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+body{
+  width:100%;
+  min-height: 82vh;
+}

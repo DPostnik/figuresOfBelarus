@@ -1,0 +1,8 @@
+<div class="card text-center" style="width: 18rem">
+  <img class="card-img-top" src="{{this.card.url}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{this.card.fullName| uppercase}}</h5>
+    <p class="card-text">{{this.card.profession| uppercase}}</p>
+    <a routerLink="/figure/biography/:{{this.card.id}}" class="btn btn-primary">Просмотреть информацию</a>
+  </div>
+</div>

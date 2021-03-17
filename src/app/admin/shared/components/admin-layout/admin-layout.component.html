@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" (click)="this.auth.logout()" routerLink="/">Белорусские деятели</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" *ngIf="auth.isAuthentificated()">
+    <ul class="navbar-nav">
+      <li class="nav-item active" routerLinkActive="active_link">
+        <a class="nav-link" routerLink="/admin/dashboard">Главная<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" routerLinkActive="active_link">
+        <a class="nav-link" routerLink="/admin/add">Добавить нового деятеля<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" href="#" (click)="logout($event)">Выйти</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

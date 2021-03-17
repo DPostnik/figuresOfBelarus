@@ -1,0 +1,24 @@
+<h1><b>{{this.figureInfo.firstName| titlecase}} {{this.figureInfo.patronymic| titlecase}} {{this.figureInfo.lastName | titlecase}} </b></h1>
+<p>Дата рождения: {{this.figureInfo.dateBirth| date}}</p>
+<p>Место рождения:  <span *ngIf="this.figureInfo.placeBirth">{{this.figureInfo.placeBirth | titlecase}},</span> <span *ngIf="this.figureInfo.regionBirth">{{this.figureInfo.regionBirth| titlecase}},</span> {{this.figureInfo.countryBirth| titlecase}}</p>
+<p>Дата смерти:  {{this.figureInfo.dateDeath| date}}</p>
+<p>Место захоронения:  <span *ngIf="this.figureInfo.placeBurial">{{this.figureInfo.placeBurial | titlecase}},</span> {{this.figureInfo.countryDeath| titlecase}}</p>
+<br><h3>Краткие сведения</h3><br>
+<p><b>{{this.figureInfo.firstName| titlecase}} {{this.figureInfo.patronymic| titlecase}} {{this.figureInfo.lastName | titlecase}}</b> -  {{this.figureInfo.profession | lowercase}}</p>
+<p *ngIf="this.figureInfo.achievements">Достижения: {{this.figureInfo.achievements}}</p>
+<p *ngIf="this.figureInfo.awards">Награды, особые отметки: {{this.figureInfo.awards}}</p>
+<p *ngIf="this.figureInfo.alias">Псевдоним: {{this.figureInfo.alias}}</p>
+<p *ngIf="this.figureInfo.attitudeToMarriage">Отношение к браку: {{this.figureInfo.attitudeToMarriage}}</p>
+<p *ngIf="this.figureInfo.characteristic">Характеристика: {{this.figureInfo.characteristic}}</p>
+<p *ngIf="this.figureInfo.citizenship">Гражданство: {{this.figureInfo.citizenship}}</p>
+<p *ngIf="this.figureInfo.confession">Конфессиональная принадлежность: {{this.figureInfo.confession}}</p>
+<p *ngIf="this.figureInfo.education">Образование: {{this.figureInfo.education}}</p>
+<p *ngIf="this.figureInfo.ethnos">Этническая принадлежность: {{this.figureInfo.ethnos}}</p>
+<p *ngIf="this.figureInfo.faith">Вера и мировозрения: {{this.figureInfo.faith}}</p>
+<p *ngIf="this.figureInfo.friendsAndEnemies">Друзья и враги: {{this.figureInfo.friendsAndEnemies}}</p>
+<p *ngIf="this.figureInfo.linksToWebsite">Интернет сайты: <a href="{{this.figureInfo.linksToWebsite}}">Ссылка</a></p>
+<p *ngIf="this.figureInfo.memberShip">Членства: {{this.figureInfo.memberShip}}</p>
+<p *ngIf="this.figureInfo.nationality">Национальность: {{this.figureInfo.nationality}}</p>
+<!--<p *ngIf="this.figureInfo.occupation">Род деятельности: {{this.figureInfo.occupation}}</p>-->
+<p *ngIf="this.figureInfo.politic">Политические взгляды: {{this.figureInfo.politic}}</p><br>
+<h3 *ngIf="this.figureInfo.biography">Биография</h3><p>{{this.figureInfo.biography}}</p>

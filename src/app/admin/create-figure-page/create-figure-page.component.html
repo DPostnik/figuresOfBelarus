@@ -1,0 +1,184 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class = 'form_create'>
+    <h1>Добавление нового деятеля</h1>
+
+      <div class="form-group">
+        <label for="lastName">Фамилия:</label>
+        <input type="text" class="form-control" id="lastName" formControlName='lastName'>
+        <div class="validation"
+             *ngIf="form.get('lastName').invalid">
+          <small *ngIf="form.get('lastName').errors.required">*Поле является обязательным для заполнения</small>
+        </div>
+      </div>
+
+    <div class="form-group">
+      <label for="firstName">Имя:</label><br>
+      <input id = "firstName" type="text" class="form-control" formControlName='firstName'  >
+      <div class="validation"
+           *ngIf="form.get('firstName').invalid">
+        <small *ngIf="form.get('firstName').errors.required">*Поле является обязательным для заполнения</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="alias">Псевдоним:</label><br>
+      <input id = "alias" type="text" class="form-control" formControlName='alias'  >
+    </div>
+
+    <div class="form-group">
+      <label for="patronymic">Отчество:</label><br>
+      <input id = "patronymic" type="text" class="form-control" formControlName='patronymic'  >
+      <div class="validation"
+           *ngIf="form.get('patronymic').invalid">
+        <small *ngIf="form.get('patronymic').errors.required">*Поле является обязательным для заполнения</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dateBirth">Дата рождения:</label><br>
+      <input id = "dateBirth" type="date" class="form-control" formControlName='dateBirth'  >
+      <div class="validation"
+           *ngIf="form.get('dateBirth').invalid">
+        <small *ngIf="form.get('dateBirth').errors.required">*Поле является обязательным для заполнения</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dateDeath">Дата смерти:</label><br>
+      <input id = "dateDeath" type="date" class="form-control" formControlName='dateDeath'  >
+      <div class="validation"
+           *ngIf="form.get('dateDeath').invalid">
+        <small *ngIf="form.get('dateDeath').errors.required">*Поле является обязательным для заполнения</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="countryBirth">Страна рождения:</label><br>
+      <input id = "countryBirth" type="text" class="form-control" formControlName='countryBirth'  >
+      <div class="validation"
+           *ngIf="form.get('countryBirth').invalid">
+        <small *ngIf="form.get('countryBirth').errors.required">*Поле является обязательным для заполнения</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="regionBirth">Регион рождения:</label><br>
+      <input id = "regionBirth" type="text" class="form-control" formControlName='regionBirth'  >
+    </div>
+
+    <div class="form-group">
+      <label for="placeBirth">Место рождения:</label><br>
+      <input id = "placeBirth" type="text" class="form-control" formControlName='placeBirth'  >
+    </div>
+
+    <div class="form-group">
+      <label for="countryDeath">Страна смерти:</label><br>
+      <input id = "countryDeath" type="text" class="form-control" formControlName='countryDeath'  >
+      <div class="validation"
+           *ngIf="form.get('countryDeath').invalid">
+        <small *ngIf="form.get('countryDeath').errors.required">*Поле является обязательным для заполнения</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="placeBurial">Место захоронения:</label><br>
+      <input id = "placeBurial" type="text" class="form-control" formControlName='placeBurial'  >
+    </div>
+
+    <div class="form-group">
+      <label for="achievements">Достижения:</label><br>
+      <input id = "achievements" type="text" class="form-control" formControlName='achievements'  >
+    </div>
+
+    <div class="form-group">
+      <label for="attitudeToMarriage">Отношение к браку:</label><br>
+      <input id = "attitudeToMarriage" type="text" class="form-control" formControlName='attitudeToMarriage'  >
+    </div>
+
+    <div class="form-group">
+      <label for="awards">Награды, особые отметки:</label><br>
+      <input id = "awards" type="text" class="form-control" formControlName='awards'  >
+    </div>
+
+    <div class="form-group">
+      <label for="biography">Биография:</label><br>
+      <input id = "biography" type="text" class="form-control" formControlName='biography'  >
+    </div>
+    <div class="form-group">
+      <label for="characteristic">Характеристика:</label><br>
+      <input id = "characteristic" type="text" class="form-control" formControlName='characteristic'  >
+    </div>
+
+    <div class="form-group">
+        <label for="citizenship">Гражданство:</label><br>
+      <input id = "citizenship" type="text" class="form-control" formControlName='citizenship'  >
+    </div>
+
+    <div class="form-group">
+      <label for="confession">Конфессиональная принадлежность:</label><br>
+      <input id = "confession" type="text" class="form-control" formControlName='confession'  >
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="education">Образование:</label><br>
+      <input id = "education" type="text" class="form-control" formControlName='education'  >
+    </div>
+
+    <div class="form-group">
+      <label for="ethnos">Этническая принадлежность:</label><br>
+      <input id = "ethnos" type="text" class="form-control" formControlName='ethnos'  >
+    </div>
+
+    <div class="form-group">
+      <label for="faith">Вера и мировозрения:</label><br>
+      <input id = "faith" type="text" class="form-control" formControlName='faith'  >
+    </div>
+
+
+    <div class="form-group">
+      <label for="friendsAndEnemies">Друзья и враги:</label><br>
+      <input id = "friendsAndEnemies" type="text" class="form-control" formControlName='friendsAndEnemies'  >
+    </div>
+
+
+    <div class="form-group">
+      <label for="linksToWebsite">Интернет сайты:</label><br>
+      <input id = "linksToWebsite" type="text" class="form-control" formControlName='linksToWebsite'  >
+    </div>
+
+
+    <div class="form-group">
+      <label for="memberShip">Членства:</label><br>
+      <input id = "memberShip" type="text" class="form-control" formControlName='memberShip'  >
+    </div>
+
+
+    <div class="form-group">
+      <label for="occupation">Род деятельности:</label><br>
+      <input id = "occupation" type="text" class="form-control" formControlName='occupation'  >
+    </div>
+
+    <div class="form-group">
+      <label for="nationality">Национальность:</label><br>
+      <input id = "nationality" type="text" class="form-control" formControlName='nationality'  >
+    </div>
+
+    <div class="form-group">
+      <label for="profession">Профессия:</label><br>
+      <input id = "profession" type="text" class="form-control" formControlName='profession'  >
+      <div class="validation"
+           *ngIf="form.get('profession').invalid">
+        <small *ngIf="form.get('profession').errors.required">*Поле является обязательным для заполнения</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="politic">Политические взгляды:</label><br>
+      <input id = "politic" type="text" class="form-control" formControlName='politic'  >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Продолжить</button>
+  </div>
+</form>

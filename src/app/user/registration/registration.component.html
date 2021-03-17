@@ -1,0 +1,22 @@
+<head>
+  <title>Пользователь</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <span class="login_header">Joining Membership</span>
+
+  <label for="firstName">Введите ваше имя:</label>
+  <input type="text" class="input" placeholder="Имя" formControlName="firstName" id="firstName">
+
+  <label for="lastName">Введите вашу фамилию:</label>
+  <input type="text" class="input" placeholder="Фамилия" formControlName="lastName" id="lastName">
+
+  <label for="email">Введите ваше email:</label>
+  <input type="text" class="input" placeholder="Email" formControlName="email" id="email">
+
+  <label for="password">Введите ваш пароль:</label>
+  <input type="password" class="input" placeholder="" formControlName="password" id="password">
+
+  <button class="btn submit_btn" type="submit" [disabled]="form.invalid || submitted">Создать аккаунт</button>
+</form>

@@ -1,0 +1,33 @@
+  <div *ngIf="infos.length!== 0; else loading" >
+    <div class="mb-4 mt-4">
+      <input [(ngModel)]="searchStr" type="text" class="form-control w-75 m-auto" placeholder="Найти деятеля...">
+    </div>
+    <table class="table w-75 m-auto table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th class="col">#</th>
+          <th class="col">Имя</th>
+          <th class="col">Фамилия</th>
+          <th class="col">Действие</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let info of infos | searchInfo:searchStr; let idx = index">
+          <th scope="row">{{idx + 1}}</th>
+          <td>{{info.firstName| titlecase}}</td>
+          <td>{{info.lastName| titlecase}} </td>
+          <td>
+            <div class="d-inline">
+              <button class="btn btn-outline-primary" [routerLink]="['/admin','edit',info.id]">Открыть</button>
+              <a routerLink="/admin/dashboard" class="btn" (click)="remove(info.id)">Удалить</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <ng-template #loading>
+    <p style="text-align: center">Идёт загрузка...</p>
+  </ng-template>
