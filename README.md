@@ -1,27 +1,26 @@
 # FiguresOfBelarus
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+##### Средствами Angular реализована front-часть информационного ресурса "Знаменитые люди Беларуси", который позволит упростить некоторые задачи, с которыми сталкиваются люди при поиске информации. Приложение представляет из себя площадку для поиска информации, где каждый пользователь сможет найти все необходимые данные о интересующих его деятелях.
 
-## Development server
+> Знаменитые люди Беларуси - далее ЗЛБ.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Задачи:
 
-## Code scaffolding
+- [x] Routing
+- [x] Admin module
+- [x] User module
+- [x] Отображение списка ЗЛБ
+- [x] Поиск и фильтрация ЗЛБ
+- [x] CRUD-операции со спискам ЗЛБ
+- [x] Auth.Service для входа в систему
+- [x] Обработка токена
+- [x] Валидация форм
+- [x] Роли user/admin
+- [ ] Возможность комментирования
+- [ ] Мультиязычность
+- [ ] Отображения самых просматриваемых ЗЛБ
+- [ ] Пагинация
+- [ ] Добавление ролей **moderator**-тот, кто может редактировать и  **observer**(без авторизации)     
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Стек технологий: RxJS, Angular Framework, Bootstrap 4. 
+#### Для backend-части Spring Framework, MySQL, Hibernate.
