@@ -7,6 +7,7 @@
 Задачи:
 
 - [x] Routing
+- [x] Route Guard
 - [x] Admin module
 - [x] User module
 - [x] Отображение списка ЗЛБ
@@ -21,6 +22,9 @@
 - [ ] Отображения самых просматриваемых ЗЛБ
 - [ ] Пагинация
 - [ ] Добавление ролей **moderator**-тот, кто может редактировать и  **observer**(без авторизации)     
+- [ ] Добавление PWA
+- [ ] Написание тестов
+- [ ] Деплой приложения
 
 ### Стек технологий: RxJS, Angular Framework, Bootstrap 4. 
 #### Для backend-части Spring Framework, MySQL, Hibernate.
